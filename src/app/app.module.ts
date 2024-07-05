@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { SplitterModule } from 'primeng/splitter'; // Import SplitterModule
+import { SplitterModule } from 'primeng/splitter';
+import { CardModule } from 'primeng/card';
+import { ButtonModule } from 'primeng/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +13,9 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    SplitterModule, // Include SplitterModule here
+    SplitterModule,
+    CardModule,
+    ButtonModule,
     AppRoutingModule
   ],
   providers: [],
