@@ -6,6 +6,9 @@ import { ButtonModule } from 'primeng/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+import { DropdownModule } from 'primeng/dropdown';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -13,10 +16,13 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     SplitterModule,
     CardModule,
     ButtonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule, 
+    DropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]

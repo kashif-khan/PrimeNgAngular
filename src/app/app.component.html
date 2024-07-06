@@ -1,45 +1,51 @@
-<div class="">
-  <div class="m-5 p-5 text-5xl text-center">This is navbar</div>
-
-  <p-splitter [panelSizes]="[20, 60, 20]" styleClass="m-0 p-0 h-screen">
-    <ng-template pTemplate>
-      <div class="col flex align-items-center justify-content-center bg-red-400 text-5xl text-white">
-        Panel 1
-      </div>
-    </ng-template>
-    <ng-template pTemplate>
-      <div class="col flex align-items-center justify-content-center bg-green-400 text-5xl text-white">
-        <p-card header="Car header" subheader="Card Subheader" styleClass="w-full">
-          <ng-template pTemplate="header">
-            <div class="flex flex-row-reverse flex-wrap">
-              <p-button label="Float right" styleClass="m-2" />
-            </div>
-          </ng-template>
-          <ul>
-            <li>Ensure that this card occupies the entire height and width of the green panel.</li>
-            <li>Adjust the height of the p-splitter to match the screen height so that scrolling is unnecessary.</li>
-            <li>The card should be scrollable if the content exceeds the height of the panel.</li>
-            <li>The float right and float left buttons should be aligned to the right and left of the card header respectively.</li>
-          </ul>
-          <ng-template pTemplate="footer">
-            <div class="flex flex-row mt-1">
-              <div class="flex align-items-center justify-content-start">
+<div class="flex flex-column h-screen">
+  <div class="p-2 text-5xl flex align-items-center justify-content-center site-nav">This is navbar</div>
+  <div class="site-content">
+    <p-splitter [panelSizes]="[20, 60, 20]" styleClass="m-0 p-0 h-full">
+      <ng-template pTemplate>
+        <div class="col flex align-items-center justify-content-center bg-red-400 text-5xl text-white">
+          Panel 1
+        </div>
+      </ng-template>
+      <ng-template pTemplate>
+        <div class="col flex align-items-center justify-content-center bg-green-400 text-5xl text-white">
+          <p-card header="Car header" subheader="Card Subheader" [ngClass]="['h-full', 'w-full']" styleClass="flex h-full w-full c-content-scroll">
+            <ng-template pTemplate="header">
+              <div class="flex justify-content-between p-2">
                 <p-button label="Float left" severity="secondary" />
-              </div>
-              <div class="flex align-items-center justify-content-end">
                 <p-button label="Float right" />
               </div>
+            </ng-template>
+            <div class="c-content">
+              <ul>
+                <li>Ensure that this card occupies the entire height and width of the green panel.</li>
+                <li>Adjust the height of the p-splitter to match the screen height so that scrolling is unnecessary.</li>
+                <li>The card should be scrollable if the content exceeds the height of the panel.</li>
+                <li>The float right and float left buttons should be aligned to the right and left of the card header respectively.</li>
+              </ul>
+              <p-dropdown 
+                [options]="cities" 
+                [(ngModel)]="selectedCity" 
+                optionLabel="name"
+                placeholder="Select a City" 
+              />
             </div>
-          </ng-template>
-        </p-card>
-      </div>
-    </ng-template>
-    <ng-template pTemplate>
-      <div class="col flex align-items-center justify-content-center bg-blue-400 text-5xl text-white">
-        Panel 3
-      </div>
-    </ng-template>
-  </p-splitter>
+            <ng-template pTemplate="footer">
+              <div class="flex justify-content-between p-2">
+                <p-button label="Float left" severity="secondary" />
+                <p-button label="Float right" />
+              </div>
+            </ng-template>
+          </p-card>
+        </div>
+      </ng-template>
+      <ng-template pTemplate>
+        <div class="col flex align-items-center justify-content-center bg-blue-400 text-5xl text-white">
+          Panel 3
+        </div>
+      </ng-template>
+    </p-splitter>
+  </div>
 </div>
 
 <!--<router-outlet></router-outlet>-->
