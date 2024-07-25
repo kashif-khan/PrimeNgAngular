@@ -9,10 +9,11 @@ html, body {
   padding: 0;
 }
 .site-nav {
-  height: 18%;
+  min-height: 10%;
 }
 .site-content {
-  height: 82%;
+  height: 90%;
+  max-height: 100%;
 }
 .c-content-scroll {
   position: relative;
