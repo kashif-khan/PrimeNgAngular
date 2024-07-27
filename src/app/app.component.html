@@ -3,13 +3,14 @@
   <div class="site-content">
     <p-splitter [panelSizes]="[20, 60, 20]" styleClass="m-0 p-0 h-full">
       <ng-template pTemplate>
-        <div class="col flex align-items-center justify-content-center bg-red-400 text-5xl text-white">
+        <div class="col flex align-items-center justify-content-center text-5xl text-white">
           Panel 1
         </div>
       </ng-template>
       <ng-template pTemplate>
-        <div class="col flex align-items-center justify-content-center bg-green-400 text-5xl text-white">
-          <p-card header="Car header" subheader="Card Subheader" [ngClass]="['h-full', 'w-full']" styleClass="flex h-full w-full c-content-scroll">
+        <div class="col flex align-items-center justify-content-center text-5xl text-white">
+          <p-card header="Card header" subheader="Card Subheader" [ngClass]="['h-full', 'w-full']"
+            styleClass="flex h-full w-full bg-green-400 c-content-scroll">
             <ng-template pTemplate="header">
               <div class="flex justify-content-between p-2">
                 <p-button label="Float left" severity="secondary" />
@@ -17,18 +18,18 @@
               </div>
             </ng-template>
             <div class="c-content">
-              <ul>
-                <li>Ensure that this card occupies the entire height and width of the green panel.</li>
-                <li>Adjust the height of the p-splitter to match the screen height so that scrolling is unnecessary.</li>
-                <li>The card should be scrollable if the content exceeds the height of the panel.</li>
-                <li>The float right and float left buttons should be aligned to the right and left of the card header respectively.</li>
-              </ul>
-              <p-dropdown 
-                [options]="cities" 
-                [(ngModel)]="selectedCity" 
-                optionLabel="name"
-                placeholder="Select a City" 
-              />
+              <div class="flex">
+                <div class="w-6 border-1 bg-red-400 overflow-y-scroll">
+                  <h1>Left Panel</h1>
+                  <h2>This should be a scrollable content area with 50% width of the card.</h2>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos minus aperiam officiis at, recusandae tenetur veniam! Necessitatibus, ad dolore! Quis itaque possimus laborum magni impedit, quae culpa, accusamus esse tempora iste laudantium, rerum debitis quos neque? Exercitationem, debitis illum eos voluptatum beatae corporis accusantium eaque eveniet temporibus vero obcaecati dolore excepturi doloribus omnis veniam animi perspiciatis dolorem tempore. Iure exercitationem qui nisi ipsum vero officiis voluptatibus adipisci eligendi nemo. Quam, sapiente cumque a, illum facere fugiat hic facilis quod quaerat sequi voluptatum nihil praesentium distinctio labore voluptate magni consectetur qui voluptatem corporis laborum blanditiis delectus. Dolorem sunt error expedita nesciunt consequatur praesentium accusantium ab, quos et, quasi dolore cumque atque, aliquam inventore a! Impedit maiores rem obcaecati rerum asperiores quas esse ea odio provident recusandae. Officia sint quas suscipit architecto totam dolor id voluptatum numquam laborum quidem animi soluta, ratione obcaecati tempora facilis harum, vel et. Maiores in voluptatum quasi, quidem iusto aliquam, illo veniam omnis consequatur laudantium ipsa itaque excepturi cumque! Facilis ratione tempora nihil praesentium, quibusdam adipisci, molestiae, magnam amet rem aut at consequatur omnis numquam sed ut impedit possimus eum dolores in quos ex? Laboriosam, ab quidem omnis repellendus eum quos eligendi in tempora consequuntur excepturi numquam quae id accusamus ducimus eos suscipit cumque obcaecati eveniet inventore iusto officia rerum? Iste vitae quaerat eveniet quam odit molestias natus in. Quae cupiditate aperiam provident neque sunt repellendus dignissimos architecto excepturi asperiores consequuntur ipsum blanditiis quo ex ratione minima error vitae id maxime natus, unde a, ducimus culpa ullam. Deserunt repudiandae provident debitis, tempora illum libero delectus laborum eos quam totam earum obcaecati, dolore architecto veritatis accusamus culpa soluta praesentium nulla perferendis aspernatur mollitia eaque corporis facilis. Ducimus nesciunt recusandae ipsa doloremque, et dicta quasi voluptatum blanditiis quisquam minima iste nemo vitae aspernatur ad explicabo quia dolorem amet quos! Eius, officiis mollitia est temporibus ea rem labore cupiditate perferendis cum. Modi in quod temporibus officiis soluta reprehenderit odit autem mollitia, et dolorum consequatur, sed nobis magni vel! Doloremque eos in eaque fugiat distinctio dolore doloribus quis tempore. Beatae delectus sequi laboriosam neque quo dolores labore, mollitia ea rem esse. Veritatis ab adipisci dolore consequatur pariatur error qui cumque, nemo eum neque id sequi est perferendis repellendus debitis vitae placeat eveniet quo eius. Delectus expedita rem quod iure porro minima distinctio, modi, illo magnam tenetur, quasi alias amet laudantium numquam illum quisquam odio ratione ab nostrum voluptate natus. Aspernatur minima animi ducimus libero aliquam obcaecati, commodi id, cum explicabo ad laudantium cumque quis? Recusandae laboriosam soluta nam impedit odio officia dolores amet cum, enim sit distinctio at veritatis reprehenderit. Exercitationem expedita sint reprehenderit sunt magnam, optio vero alias aliquid distinctio dolorem quaerat hic modi enim doloremque? Magni, vel temporibus suscipit alias et cumque ratione ex nihil numquam beatae soluta error voluptates laboriosam minima sequi voluptatum. Labore voluptatum quae dolore odio voluptates perferendis libero quaerat eum ratione voluptatibus amet a dignissimos et modi illo quia, inventore qui vel aperiam quasi sunt incidunt! Exercitationem sunt, reprehenderit quos impedit vero facere illum dicta!
+                </div>
+                <div class="w-6 border-1 bg-blue-400 overflow-y-scroll">
+                  <h1>Right Panel</h1>
+                  <h2>This should be a scrollable content area with 50% width of the card.</h2>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos minus aperiam officiis at, recusandae tenetur veniam! Necessitatibus, ad dolore! Quis itaque possimus laborum magni impedit, quae culpa, accusamus esse tempora iste laudantium, rerum debitis quos neque? Exercitationem, debitis illum eos voluptatum beatae corporis accusantium eaque eveniet temporibus vero obcaecati dolore excepturi doloribus omnis veniam animi perspiciatis dolorem tempore. Iure exercitationem qui nisi ipsum vero officiis voluptatibus adipisci eligendi nemo. Quam, sapiente cumque a, illum facere fugiat hic facilis quod quaerat sequi voluptatum nihil praesentium distinctio labore voluptate magni consectetur qui voluptatem corporis laborum blanditiis delectus. Dolorem sunt error expedita nesciunt consequatur praesentium accusantium ab, quos et, quasi dolore cumque atque, aliquam inventore a! Impedit maiores rem obcaecati rerum asperiores quas esse ea odio provident recusandae. Officia sint quas suscipit architecto totam dolor id voluptatum numquam laborum quidem animi soluta, ratione obcaecati tempora facilis harum, vel et. Maiores in voluptatum quasi, quidem iusto aliquam, illo veniam omnis consequatur laudantium ipsa itaque excepturi cumque! Facilis ratione tempora nihil praesentium, quibusdam adipisci, molestiae, magnam amet rem aut at consequatur omnis numquam sed ut impedit possimus eum dolores in quos ex? Laboriosam, ab quidem omnis repellendus eum quos eligendi in tempora consequuntur excepturi numquam quae id accusamus ducimus eos suscipit cumque obcaecati eveniet inventore iusto officia rerum? Iste vitae quaerat eveniet quam odit molestias natus in. Quae cupiditate aperiam provident neque sunt repellendus dignissimos architecto excepturi asperiores consequuntur ipsum blanditiis quo ex ratione minima error vitae id maxime natus, unde a, ducimus culpa ullam. Deserunt repudiandae provident debitis, tempora illum libero delectus laborum eos quam totam earum obcaecati, dolore architecto veritatis accusamus culpa soluta praesentium nulla perferendis aspernatur mollitia eaque corporis facilis. Ducimus nesciunt recusandae ipsa doloremque, et dicta quasi voluptatum blanditiis quisquam minima iste nemo vitae aspernatur ad explicabo quia dolorem amet quos! Eius, officiis mollitia est temporibus ea rem labore cupiditate perferendis cum. Modi in quod temporibus officiis soluta reprehenderit odit autem mollitia, et dolorum consequatur, sed nobis magni vel! Doloremque eos in eaque fugiat distinctio dolore doloribus quis tempore. Beatae delectus sequi laboriosam neque quo dolores labore, mollitia ea rem esse. Veritatis ab adipisci dolore consequatur pariatur error qui cumque, nemo eum neque id sequi est perferendis repellendus debitis vitae placeat eveniet quo eius. Delectus expedita rem quod iure porro minima distinctio, modi, illo magnam tenetur, quasi alias amet laudantium numquam illum quisquam odio ratione ab nostrum voluptate natus. Aspernatur minima animi ducimus libero aliquam obcaecati, commodi id, cum explicabo ad laudantium cumque quis? Recusandae laboriosam soluta nam impedit odio officia dolores amet cum, enim sit distinctio at veritatis reprehenderit. Exercitationem expedita sint reprehenderit sunt magnam, optio vero alias aliquid distinctio dolorem quaerat hic modi enim doloremque? Magni, vel temporibus suscipit alias et cumque ratione ex nihil numquam beatae soluta error voluptates laboriosam minima sequi voluptatum. Labore voluptatum quae dolore odio voluptates perferendis libero quaerat eum ratione voluptatibus amet a dignissimos et modi illo quia, inventore qui vel aperiam quasi sunt incidunt! Exercitationem sunt, reprehenderit quos impedit vero facere illum dicta!
+                </div>
+              </div>
             </div>
             <ng-template pTemplate="footer">
               <div class="flex justify-content-between p-2">
@@ -40,7 +41,7 @@
         </div>
       </ng-template>
       <ng-template pTemplate>
-        <div class="col flex align-items-center justify-content-center bg-blue-400 text-5xl text-white">
+        <div class="col flex align-items-center justify-content-center text-5xl text-white">
           Panel 3
         </div>
       </ng-template>
